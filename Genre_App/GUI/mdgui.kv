@@ -1,0 +1,83 @@
+#:kivy 2.0.0
+<MDLayout>:
+    file_chooser_button: file_chooser_button
+    path_name_label: path_name_label
+    predict_button: predict_button
+    audio_player_button: audio_player_button
+    BoxLayout:
+        orientation:'vertical'
+        size: root.width, root.height
+        Screen:
+            MDCard:
+                
+                size_hint: None,None
+                size:300,400
+                padding:'10dp'
+                pos_hint:{'center_x':0.5,'center_y':0.5}
+                spacing:25
+                elevation:10
+                orientation:'vertical'
+
+                MDLabel:
+                    text:"GENRE CLASSIFICATION"
+                    font_size: 20
+                    halign: 'center'
+                    size_hint_y:None
+                    height: self.texture_size[1]
+                    padding_y:15
+                
+                MDIconButton:
+                    id: audio_player_button
+                    icon: ".\contactless-payment-circle-outline (1).png"
+                    theme_text_color: "Custom"
+                    text_color: app.theme_cls.primary_color
+                    user_font_size: "64sp"
+                    pos_hint:{"center_x": .5, "center_y": .5}
+                    on_release: root.play_audio()
+                
+                BoxLayout:
+
+                    spacing:30
+                    orientation:'horizontal'
+                    MDRoundFlatButton:
+                        id: file_chooser_button
+                        text: "Load"
+                        text_color: 1, 1, 1, 1
+                        on_release:root.press()
+
+                    MDTextFieldRound:
+                        id: path_name_label
+                        text:'test'
+                        readonly: True
+                        size_hint_x: None
+                        size_hint_y:None
+                        height: 35
+
+                MDRoundFlatButton:
+                    id: predict_button 
+                    text: "Predict"
+                    text_color: 1, 1, 1, 1
+                    on_release: root.predict_2()
+
+<ChooserGuI>:
+    layout:layout
+    filechooser:filechooser
+    id:layout
+    size_hint:1,1
+    BoxLayout:
+	    
+	    size : root.width, root.height
+	
+	    FileChooserIconView:
+		    id:filechooser
+		    on_selection: layout.on_selected(filechooser.selection)		
+		
+<ResultGUI>:
+
+        
+
+            
+                        
+                        
+
+                    
