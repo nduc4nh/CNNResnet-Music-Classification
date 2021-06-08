@@ -1,1 +1,1 @@
-# Music-classification---Deep-learning-
+# Music-classification Deep learning-CNN Resnet
