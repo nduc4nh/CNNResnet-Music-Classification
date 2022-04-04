@@ -14,3 +14,9 @@
 </ul>
 <h2> Genre_app </h2>
 <p> This code is runable using python -- including models and GUIs </p>
+
+<h2>
+Demo  
+  </h2>
+
+Check out the demo <a href="https://www.youtube.com/watch?v=gJ04XsLGrWE&t=28s&ab_channel=DucAnhNguyen"> here </a>
